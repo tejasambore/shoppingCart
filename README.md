@@ -71,7 +71,7 @@ This project is open-source and available under the **MIT License**.
 ---
 
 ## 🙌 Acknowledgments
-I would like to thank [**Innomatics Research Labs**] (https://innomatics.in)for this opportunity to work on a real-world web development project. Looking forward to more exciting challenges ahead! 🎯
+I would like to thank [**Innomatics Research Labs**] (https://innomatics.in) for this opportunity to work on a real-world web development project. Looking forward to more exciting challenges ahead! 🎯
 
 ---
 
