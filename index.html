@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">🛍️ ShopEase</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Mobiles</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+          🛒 <span id="cartItemCount">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Find the Best Deals on Your Favorite Products</h1>
+      <p>Shop the latest collection with amazing discounts</p>
+      <button class="shop-now">Shop Now</button>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section">
+      <h1>Featured Products</h1>
+      <div class="product-list">
+        <div class="product">
+          <img src="assets/mobile.jpg" alt="Smartphone">
+          <div class="product-info">
+            <h3>Smartphone</h3>
+            <p class="product-desc">A high-performance smartphone with an advanced camera.</p>
+            <p class="product-price">$699</p>
+            <button class="add-to-cart" data-id="1" data-name="Smartphone" data-price="699" data-img="assets/mobile.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/laptop.jpg" alt="Laptop">
+          <div class="product-info">
+            <h3>Laptop</h3>
+            <p class="product-desc">Powerful laptop with 16GB RAM and 512GB SSD.</p>
+            <p class="product-price">$1200</p>
+            <button class="add-to-cart" data-id="2" data-name="Laptop" data-price="1200" data-img="assets/laptop.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/headphone.jpg" alt="Headphones">
+          <div class="product-info">
+            <h3>Wireless Headphones</h3>
+            <p class="product-desc">Noise-canceling headphones with immersive sound.</p>
+            <p class="product-price">$199</p>
+            <button class="add-to-cart" data-id="3" data-name="Wireless Headphones" data-price="199" data-img="assets/headphone.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/smartwatch.jpg" alt="Smartwatch">
+          <div class="product-info">
+            <h3>Smartwatch</h3>
+            <p class="product-desc">Track your health & fitness with a sleek design.</p>
+            <p class="product-price">$249</p>
+            <button class="add-to-cart" data-id="4" data-name="Smartwatch" data-price="250" data-img="assets/smartwatch.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/tablet.jpg" alt="Tablet">
+          <div class="product-info">
+            <h3>Tablet</h3>
+            <p class="product-desc">A lightweight tablet with a 10-inch Retina display.</p>
+            <p class="product-price">$399</p>
+            <button class="add-to-cart" data-id="5" data-name="Tablet" data-price="399" data-img="assets/tablet.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/gaming-console.jpg" alt="Gaming Console">
+          <div class="product-info">
+            <h3>Gaming Console</h3>
+            <p class="product-desc">Next-gen gaming experience with 4K resolution.</p>
+            <p class="product-price">$499</p>
+            <button class="add-to-cart" data-id="6" data-name="Gaming Console" data-price="499" data-img="assets/gaming-console.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/dslr-camera.jpg" alt="DSLR Camera">
+          <div class="product-info">
+            <h3>DSLR Camera</h3>
+            <p class="product-desc">Capture stunning photos with a 24MP sensor.</p>
+            <p class="product-price">$899</p>
+            <button class="add-to-cart" data-id="7" data-name="DSLR Camera" data-price="899" data-img="assets/dslr-camera.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/keyboard.jpg" alt="Mechanical Keyboard">
+          <div class="product-info">
+            <h3>Mechanical Keyboard</h3>
+            <p class="product-desc">RGB backlit keyboard with smooth mechanical switches.</p>
+            <p class="product-price">$129</p>
+            <button class="add-to-cart" data-id="8" data-name="Mechanical Keyboard" data-price="129" data-img="assets/keyboard.jpg">Add to Cart</button>
+          </div>
+        </div>
+    
+        <div class="product">
+          <img src="assets/mouse.jpg" alt="Gaming Mouse">
+          <div class="product-info">
+            <h3>Gaming Mouse</h3>
+            <p class="product-desc">Precision gaming mouse with customizable buttons.</p>
+            <p class="product-price">$79</p>
+            <button class="add-to-cart" data-id="9" data-name="Gaming Mouse" data-price="79" data-img="assets/mouse.jpg">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Shopping Cart (Sliding Panel) -->
+    <div id="cart" class="cart">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart" class="close-cart">&times;</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <p>Total: $<span id="totalPrice">0</span></p>
+          <button id="emptyCart">Empty Cart</button>
+          <button id="emptyCart">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
